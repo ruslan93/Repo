@@ -1,37 +1,55 @@
-//
-//  SearchViewController.m
-//  FirstTestTask
-//
-//  Created by Ruslan on 9/1/15.
-//  Copyright (c) 2015 Ruslan Palapa. All rights reserved.
-//
+#import "PRSearchViewController.h"
+#import "PRMapViewController.h"
+#import "PRAppDelegate.h"
 
-#import "SearchViewController.h"
-
-@interface SearchViewController ()
+@interface PRSearchViewController ()
+@property (strong) PRAppDelegate *appDelegate;
 
 @end
 
-@implementation SearchViewController
+@implementation PRSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.appDelegate=[[UIApplication sharedApplication]delegate];
+    self.textFieldCityName.delegate=self;
+    [self.appDelegate addObserver:self forKeyPath:@"city.cod" options:NSKeyValueObservingOptionNew context:nil];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [[self navigationController] setNavigationBarHidden:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)buttonPressed:(id)sender {
+    NSString *city = [self.textFieldCityName.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    if (city.length!=0)
+    {
+        [self.appDelegate getDataFromServer:city];
+    }
+    else {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"You have not type name of city" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if (self.appDelegate.city.cod==200) {
+        PRMapViewController *controller  = [self.storyboard instantiateViewControllerWithIdentifier:@"viewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Message" message:@"City not found" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
 }
-*/
+-(void)dealloc{
+    [self.appDelegate removeObserver:self forKeyPath:@"city.cod"];
+}
 
+#pragma mark - TextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
 @end

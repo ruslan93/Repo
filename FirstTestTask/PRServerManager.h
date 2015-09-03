@@ -1,16 +1,8 @@
-//
-//  ServerManager.h
-//  FirstTestTask
-//
-//  Created by Ruslan on 25.11.14.
-//  Copyright (c) 2014 Ruslan Palapa. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
-@interface ServerManager : NSObject
+@interface PRServerManager : NSObject
 
-+ (ServerManager*) sharedManager;
++ (PRServerManager*) sharedManager;
 
 
 - (void) getDataWithMethod:(NSString*)method

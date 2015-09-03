@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2206933D1B960F4E0045C12D /* Black_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2206933B1B960F4E0045C12D /* Black_button.png */; };
+		2206933E1B960F4E0045C12D /* weather.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2206933C1B960F4E0045C12D /* weather.jpg */; };
+		220693411B9611690045C12D /* PRSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220693401B9611690045C12D /* PRSearchViewController.m */; };
+		220693441B9634410045C12D /* PRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 220693431B9634410045C12D /* PRCity.m */; };
 		22433EB01A241B720095653A /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22433EAF1A241B720095653A /* main.storyboard */; };
 		228051711B948D54004D8BD3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2280514C1B948D54004D8BD3 /* AFHTTPRequestOperation.m */; };
 		228051721B948D54004D8BD3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2280514E1B948D54004D8BD3 /* AFHTTPRequestOperationManager.m */; };
@@ -26,14 +30,17 @@
 		228051801B948D54004D8BD3 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2280516E1B948D54004D8BD3 /* UIRefreshControl+AFNetworking.m */; };
 		228051811B948D54004D8BD3 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 228051701B948D54004D8BD3 /* UIWebView+AFNetworking.m */; };
 		228051831B949709004D8BD3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228051821B949709004D8BD3 /* MapKit.framework */; };
-		228051861B94A4B4004D8BD3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228051851B94A4B4004D8BD3 /* TableViewController.m */; };
-		228051891B94AA45004D8BD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228051881B94AA45004D8BD3 /* ViewController.m */; };
+		228051861B94A4B4004D8BD3 /* PRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228051851B94A4B4004D8BD3 /* PRTableViewController.m */; };
+		228051891B94AA45004D8BD3 /* PRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228051881B94AA45004D8BD3 /* PRMapViewController.m */; };
+		22CD538F1B9714C500BD4047 /* PRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CD538E1B9714C500BD4047 /* PRDetailViewController.m */; };
+		22CD53921B971F2400BD4047 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22CD53911B971F2400BD4047 /* Entitlements.plist */; };
 		22ED9A511A23CC070005BCDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED9A501A23CC070005BCDD /* main.m */; };
-		22ED9A541A23CC070005BCDD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED9A531A23CC070005BCDD /* AppDelegate.m */; };
+		22ED9A541A23CC070005BCDD /* PRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED9A531A23CC070005BCDD /* PRAppDelegate.m */; };
 		22ED9A5C1A23CC070005BCDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22ED9A5B1A23CC070005BCDD /* Images.xcassets */; };
 		22ED9A5F1A23CC070005BCDD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED9A5D1A23CC070005BCDD /* LaunchScreen.xib */; };
 		22ED9A6B1A23CC070005BCDD /* FirstTestTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED9A6A1A23CC070005BCDD /* FirstTestTaskTests.m */; };
-		22ED9AB61A23E47B0005BCDD /* ServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED9AB51A23E47B0005BCDD /* ServerManager.m */; };
+		22ED9AB61A23E47B0005BCDD /* PRServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED9AB51A23E47B0005BCDD /* PRServerManager.m */; };
+		22FD7BD41B972B51000A8275 /* PRSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD7BD31B972B51000A8275 /* PRSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2206933B1B960F4E0045C12D /* Black_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black_button.png; sourceTree = "<group>"; };
+		2206933C1B960F4E0045C12D /* weather.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weather.jpg; sourceTree = "<group>"; };
+		2206933F1B9611690045C12D /* PRSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSearchViewController.h; sourceTree = "<group>"; };
+		220693401B9611690045C12D /* PRSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSearchViewController.m; sourceTree = "<group>"; };
+		220693421B9634410045C12D /* PRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCity.h; sourceTree = "<group>"; };
+		220693431B9634410045C12D /* PRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCity.m; sourceTree = "<group>"; };
 		22433EAF1A241B720095653A /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		2280514B1B948D54004D8BD3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		2280514C1B948D54004D8BD3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -86,22 +99,27 @@
 		2280516F1B948D54004D8BD3 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		228051701B948D54004D8BD3 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		228051821B949709004D8BD3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		228051841B94A4B4004D8BD3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		228051851B94A4B4004D8BD3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		228051871B94AA45004D8BD3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		228051881B94AA45004D8BD3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		228051841B94A4B4004D8BD3 /* PRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTableViewController.h; sourceTree = "<group>"; };
+		228051851B94A4B4004D8BD3 /* PRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTableViewController.m; sourceTree = "<group>"; };
+		228051871B94AA45004D8BD3 /* PRMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRMapViewController.h; sourceTree = "<group>"; };
+		228051881B94AA45004D8BD3 /* PRMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRMapViewController.m; sourceTree = "<group>"; };
+		22CD538D1B9714C500BD4047 /* PRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRDetailViewController.h; sourceTree = "<group>"; };
+		22CD538E1B9714C500BD4047 /* PRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRDetailViewController.m; sourceTree = "<group>"; };
+		22CD53911B971F2400BD4047 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		22ED9A4B1A23CC070005BCDD /* FirstTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ED9A4F1A23CC070005BCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22ED9A501A23CC070005BCDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22ED9A521A23CC070005BCDD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		22ED9A531A23CC070005BCDD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22ED9A521A23CC070005BCDD /* PRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRAppDelegate.h; sourceTree = "<group>"; };
+		22ED9A531A23CC070005BCDD /* PRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRAppDelegate.m; sourceTree = "<group>"; };
 		22ED9A5B1A23CC070005BCDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22ED9A5E1A23CC070005BCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		22ED9A641A23CC070005BCDD /* FirstTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22ED9A691A23CC070005BCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22ED9A6A1A23CC070005BCDD /* FirstTestTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTestTaskTests.m; sourceTree = "<group>"; };
-		22ED9AB41A23E47B0005BCDD /* ServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerManager.h; sourceTree = "<group>"; };
-		22ED9AB51A23E47B0005BCDD /* ServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerManager.m; sourceTree = "<group>"; };
+		22ED9AB41A23E47B0005BCDD /* PRServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRServerManager.h; sourceTree = "<group>"; };
+		22ED9AB51A23E47B0005BCDD /* PRServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRServerManager.m; sourceTree = "<group>"; };
+		22FD7BD21B972B51000A8275 /* PRSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSection.h; sourceTree = "<group>"; };
+		22FD7BD31B972B51000A8275 /* PRSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2206933A1B960F4E0045C12D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2206933B1B960F4E0045C12D /* Black_button.png */,
+				2206933C1B960F4E0045C12D /* weather.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		225CAC391B97B1F000DE2E89 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				228051841B94A4B4004D8BD3 /* PRTableViewController.h */,
+				228051851B94A4B4004D8BD3 /* PRTableViewController.m */,
+				228051871B94AA45004D8BD3 /* PRMapViewController.h */,
+				228051881B94AA45004D8BD3 /* PRMapViewController.m */,
+				2206933F1B9611690045C12D /* PRSearchViewController.h */,
+				220693401B9611690045C12D /* PRSearchViewController.m */,
+				22CD538D1B9714C500BD4047 /* PRDetailViewController.h */,
+				22CD538E1B9714C500BD4047 /* PRDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		2280514A1B948D54004D8BD3 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,9 +218,19 @@
 			path = "../../../../Desktop/FirstTestTask/FirstTestTask/Libs/UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		22CD53901B971D4500BD4047 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				220693421B9634410045C12D /* PRCity.h */,
+				220693431B9634410045C12D /* PRCity.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		22ED9A421A23CC070005BCDD = {
 			isa = PBXGroup;
 			children = (
+				22CD53911B971F2400BD4047 /* Entitlements.plist */,
 				228051821B949709004D8BD3 /* MapKit.framework */,
 				22ED9A761A23CC470005BCDD /* Libs */,
 				22ED9A4D1A23CC070005BCDD /* FirstTestTask */,
@@ -199,15 +251,16 @@
 		22ED9A4D1A23CC070005BCDD /* FirstTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				22ED9AB41A23E47B0005BCDD /* ServerManager.h */,
-				22ED9AB51A23E47B0005BCDD /* ServerManager.m */,
-				22ED9A521A23CC070005BCDD /* AppDelegate.h */,
-				22ED9A531A23CC070005BCDD /* AppDelegate.m */,
+				225CAC391B97B1F000DE2E89 /* Controllers */,
+				22CD53901B971D4500BD4047 /* Model */,
+				2206933A1B960F4E0045C12D /* Images */,
+				22ED9AB41A23E47B0005BCDD /* PRServerManager.h */,
+				22ED9AB51A23E47B0005BCDD /* PRServerManager.m */,
+				22ED9A521A23CC070005BCDD /* PRAppDelegate.h */,
+				22ED9A531A23CC070005BCDD /* PRAppDelegate.m */,
+				22FD7BD21B972B51000A8275 /* PRSection.h */,
+				22FD7BD31B972B51000A8275 /* PRSection.m */,
 				22433EAF1A241B720095653A /* main.storyboard */,
-				228051841B94A4B4004D8BD3 /* TableViewController.h */,
-				228051851B94A4B4004D8BD3 /* TableViewController.m */,
-				228051871B94AA45004D8BD3 /* ViewController.h */,
-				228051881B94AA45004D8BD3 /* ViewController.m */,
 				22ED9A5B1A23CC070005BCDD /* Images.xcassets */,
 				22ED9A5D1A23CC070005BCDD /* LaunchScreen.xib */,
 				22ED9A4E1A23CC070005BCDD /* Supporting Files */,
@@ -331,9 +384,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CD53921B971F2400BD4047 /* Entitlements.plist in Resources */,
+				2206933E1B960F4E0045C12D /* weather.jpg in Resources */,
 				22433EB01A241B720095653A /* main.storyboard in Resources */,
 				22ED9A5F1A23CC070005BCDD /* LaunchScreen.xib in Resources */,
 				22ED9A5C1A23CC070005BCDD /* Images.xcassets in Resources */,
+				2206933D1B960F4E0045C12D /* Black_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,12 +408,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				228051791B948D54004D8BD3 /* AFURLSessionManager.m in Sources */,
-				22ED9A541A23CC070005BCDD /* AppDelegate.m in Sources */,
+				22FD7BD41B972B51000A8275 /* PRSection.m in Sources */,
+				22ED9A541A23CC070005BCDD /* PRAppDelegate.m in Sources */,
 				228051741B948D54004D8BD3 /* AFNetworkReachabilityManager.m in Sources */,
 				2280517A1B948D54004D8BD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				22ED9AB61A23E47B0005BCDD /* ServerManager.m in Sources */,
+				22ED9AB61A23E47B0005BCDD /* PRServerManager.m in Sources */,
 				228051761B948D54004D8BD3 /* AFURLConnectionOperation.m in Sources */,
-				228051861B94A4B4004D8BD3 /* TableViewController.m in Sources */,
+				220693441B9634410045C12D /* PRCity.m in Sources */,
+				228051861B94A4B4004D8BD3 /* PRTableViewController.m in Sources */,
 				2280517F1B948D54004D8BD3 /* UIProgressView+AFNetworking.m in Sources */,
 				228051731B948D54004D8BD3 /* AFHTTPSessionManager.m in Sources */,
 				228051771B948D54004D8BD3 /* AFURLRequestSerialization.m in Sources */,
@@ -370,9 +428,11 @@
 				228051721B948D54004D8BD3 /* AFHTTPRequestOperationManager.m in Sources */,
 				228051801B948D54004D8BD3 /* UIRefreshControl+AFNetworking.m in Sources */,
 				228051751B948D54004D8BD3 /* AFSecurityPolicy.m in Sources */,
-				228051891B94AA45004D8BD3 /* ViewController.m in Sources */,
+				22CD538F1B9714C500BD4047 /* PRDetailViewController.m in Sources */,
+				228051891B94AA45004D8BD3 /* PRMapViewController.m in Sources */,
 				228051781B948D54004D8BD3 /* AFURLResponseSerialization.m in Sources */,
 				228051711B948D54004D8BD3 /* AFHTTPRequestOperation.m in Sources */,
+				220693411B9611690045C12D /* PRSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +546,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				INFOPLIST_FILE = FirstTestTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -496,7 +560,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				INFOPLIST_FILE = FirstTestTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

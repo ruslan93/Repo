@@ -1,16 +1,13 @@
-//
-//  AppDelegate.m
-//  FirstTestTask
-//
-//  Created by Ruslan on 24.11.14.
-//  Copyright (c) 2014 Ruslan Palapa. All rights reserved.
-//
 
-#import "AppDelegate.h"
-@interface AppDelegate ()
+#import "PRAppDelegate.h"
+#import "PRServerManager.h"
+#import "AFNetworking.h"
+#import "PRCity.h"
+@interface PRAppDelegate ()
+
 @end
 
-@implementation AppDelegate
+@implementation PRAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -18,26 +15,34 @@
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
+-(void)getDataFromServer:(NSString*) name{
+            NSString *method = [NSString stringWithFormat:@"?q=%@", name];
+            [[PRServerManager sharedManager]getDataWithMethod:method onSuccess:^(NSArray *data)
+             {
+                 if ([[[data valueForKeyPath:@"cod"]firstObject]integerValue]!=404){
+                         NSInteger cod =  [[[data valueForKeyPath:@"cod"]firstObject]integerValue];
+                         CGFloat lon = [[[data valueForKeyPath:@"coord.lon"]firstObject]floatValue];
+                         CGFloat lat = [[[data valueForKeyPath:@"coord.lat"]firstObject]floatValue];
+                         NSString *name =  [[data valueForKeyPath:@"name"]firstObject];
+                         NSString *country =[[data valueForKeyPath:@"sys.country"]firstObject];
+                         NSString *weatherMain = [[[data valueForKeyPath:@"weather.main"]firstObject]firstObject];
+                         NSString *weatherDescription = [[[data valueForKeyPath:@"weather.description"]firstObject]firstObject];
+                         NSString *weatherIcon = [[[data valueForKeyPath:@"weather.icon"]firstObject]firstObject];
+                         CGFloat mainTemp =  [[[data valueForKeyPath:@"main.temp"]firstObject]floatValue];
+                         NSInteger mainPressure =  [[[data valueForKeyPath:@"main.pressure"]firstObject]integerValue];
+                         NSInteger mainHumidity =  [[[data valueForKeyPath:@"main.humidity"]firstObject]integerValue];
+                         CGFloat mainTempMin =  [[[data valueForKeyPath:@"main.temp_min"]firstObject]floatValue];
+                         CGFloat mainTempMax =  [[[data valueForKeyPath:@"main.temp_max"]firstObject]floatValue];
+                         CGFloat windSpeed =  [[[data valueForKeyPath:@"wind.speed"]firstObject]floatValue];
+                         CGFloat windDeg =  [[[data valueForKeyPath:@"wind.deg"]firstObject]floatValue];
+                         self.city = [[PRCity alloc]initWithName:name Lat:lat Lon:lon Country:country WeatherMain:weatherMain WeatherDescription:weatherDescription WeatherIcon:weatherIcon MainTemp:mainTemp MainPressure:mainPressure MainHumidity:mainHumidity MainTempMin:mainTempMin MainTempMax:mainTempMax WindSpeed:windSpeed WindDeg:windDeg Cod:cod];
+                 }
+                 else {
+                     self.city=[[PRCity alloc]init];
+                 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
+             } onFailure:^(NSError *error, NSInteger statusCode)
+             {
+             }];
+    }
 @end
