@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "99AAD02AB09DD23C3993F719EAFB009753C380C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "99AAD02AB09DD23C3993F719EAFB009753C380C8" : 0,
+    "6B5928ABB12591000DBF030AFF3B1DD34DF14525" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EF951F03-72F7-4FF6-BAB0-70AA4AF28FDB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "99AAD02AB09DD23C3993F719EAFB009753C380C8" : "FirstTestTask-master\/",
+    "6B5928ABB12591000DBF030AFF3B1DD34DF14525" : "..\/Desktop\/FirstTestTask"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FirstTestTask",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FirstTestTask.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ruslan93\/FirstTestTask.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6B5928ABB12591000DBF030AFF3B1DD34DF14525"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ruslan93\/Repo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "99AAD02AB09DD23C3993F719EAFB009753C380C8"
+    }
+  ]
+}
