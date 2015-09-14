@@ -9,8 +9,6 @@
 @property (strong,nonatomic) NSMutableArray *cities;
 @property (strong) PRAppDelegate *appDelegate;
 @property (strong, nonatomic) NSArray* sectionsArray;
-
-
 @end
 
 @implementation PRTableViewController
@@ -22,8 +20,15 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:1/255.f green:122/255.f blue:1 alpha:1]};
     self.cities = [ NSMutableArray arrayWithObjects:@"Amsterdam", @"Athens", @"Barcelona", @"Beijing", @"Belgrade", @"Berlin", @"Bogota", @"Bratislava", @"Brussels", @"Bucharest", @"Budapest", @"Chicago", @"Dubai", @"Dublin", @"Frankfurt", @"Helsinki", @"Istanbul", @"Kabul", @"Kyiv", @"Lisbon", @"London", @"Madrid", @"Mexico", @"Moscow" , @"Nairobi" , @"Oslo", @"Ottawa", @"Paris", @"Riga", @"Tokyo", @"Zagreb", nil ];
     self.sectionsArray = [self generateSectionsFromArray:self.cities withFilter:@""];
+    [self.navigationItem setTitle:@"Favorite cities"];
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+    UIImageView *tableBackgroundView = [[UIImageView alloc]
+                                        initWithImage:[UIImage imageNamed:@"city.jpg"]];
+    [tableBackgroundView setFrame: self.tableView.frame];
+    [self.tableView setBackgroundView:tableBackgroundView];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0,0,self.tabBarController.tabBar.frame.size.height
+,0)];
 }
-
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -70,6 +75,7 @@
 }
 
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.sectionsArray count];
 
@@ -95,16 +101,28 @@
     PRSection* section = [self.sectionsArray objectAtIndex:indexPath.section];
     NSString* name = [section.itemsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = name;
+    cell.textLabel.textColor=[UIColor whiteColor];
+    [cell.textLabel setFont:[UIFont boldSystemFontOfSize:17.f]];
+    cell.backgroundColor= [UIColor clearColor];
     return cell;
 }
 
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 3, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    NSString *string = [[self.sectionsArray objectAtIndex:section] sectionName];
+    [label setText:string];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:0.5]];
+    return view;
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PRSection* section = [self.sectionsArray objectAtIndex:indexPath.section];
     [self.appDelegate getDataFromServer:[section.itemsArray objectAtIndex:indexPath.row]];
-
-
 }
 
 

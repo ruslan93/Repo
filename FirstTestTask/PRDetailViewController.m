@@ -15,9 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelWindSpeed;
 @property (weak, nonatomic) IBOutlet UILabel *labelWindDeg;
 @property (weak, nonatomic) IBOutlet UILabel *labelCoords;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *labelWeather;
-@property (weak, nonatomic) IBOutlet UILabel *labelCelsiusTemperature;
+
 
 @end
 
@@ -25,6 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.appDelegate=[[UIApplication sharedApplication]delegate];
+    [self.navigationItem setTitle: @"Details"];
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+        UIImageView *tableBackgroundView = [[UIImageView alloc]
+                                            initWithImage:[UIImage imageNamed:@"image.jpg"]];
+        [tableBackgroundView setFrame: self.tableView.frame];
+    [self.tableView setBackgroundView:tableBackgroundView];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -32,25 +36,28 @@
     [self.labelCountry setText:city.country];
     [self.labelCity setText:city.name];
     [self.labelCloudiness setText:city.weatherDescription];
-    [self.labelCurrentTemperature setText:[NSString stringWithFormat:@"%ld", (long)city.mainTemp ]];
+    [self.labelCurrentTemperature setText:[NSString stringWithFormat:@"%ldºC", (long)city.mainTemp ]];
     [self.labelPressure setText:[NSString stringWithFormat:@"%ld hpa", (long)city.mainPressure ]];
     [self.labelHumidity setText:[NSString stringWithFormat:@"%ld %c", (long)city.mainHumidity, '%' ]];
-    [self.labelMaxTemperature setText:[NSString stringWithFormat:@"%ld", (long)city.mainTempMax ]];
-    [self.labelMinTemperature setText:[NSString stringWithFormat:@"%ld", (long)city.mainTempMin ]];
+    [self.labelMaxTemperature setText:[NSString stringWithFormat:@"%ldºC", (long)city.mainTempMax ]];
+    [self.labelMinTemperature setText:[NSString stringWithFormat:@"%ldºC", (long)city.mainTempMin ]];
     [self.labelWindSpeed setText:[NSString stringWithFormat:@"%ld m/s", (long)city.windSpeed ]];
     [self.labelWindDeg setText:[NSString stringWithFormat:@"%ld", (long)city.windDeg ]];
     [self.labelCoords setText: [NSString stringWithFormat:@"[%.3f,%.3f]", city.lat, city.lon]];
-
-    NSString *ImageURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/img/w/", self.appDelegate.city.weatherIcon];
-    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:ImageURL]];
-    self.imageView.image = [UIImage imageWithData:imageData];
-    self.labelCelsiusTemperature.text=[NSString stringWithFormat:@"%.2f C", self.appDelegate.city.mainTemp-273.15f];
-    self.labelWeather.text=self.appDelegate.city.weatherMain;
-    
-
 }
 
-                                                                                                                                
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 3, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    NSString *string = [self tableView:self.tableView titleForHeaderInSection:section];
+    [label setText:string];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:0.5]];
+    return view;
+}
+
                                                                                                                                 
                                                                                                                                 
 @end

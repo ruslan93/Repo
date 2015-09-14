@@ -22,6 +22,7 @@
     self.windSpeed=speed;
     self.windDeg=deg;
     self.cod=cod;
+    self.cities=[NSMutableArray array];
     }
     return self;
 }
@@ -43,5 +44,9 @@
     [copy setWindDeg:[self windDeg]];
     [copy setCod:[self cod]];
     return copy;
+}
+-(void) print {
+    NSLog(@"%@ - %f-%f-%@ - %@-%@-%@ - %ld-%ld-%f - %f-%f-%f - %f-%ld-", self.name, self.lat, self.lon,
+          self.country, self.weatherMain, self.weatherIcon, self.weatherDescription, (long)self.mainHumidity, (long)self.mainPressure, self.mainTemp, self.mainTempMax, self.mainTempMin, self.windDeg, self.windSpeed, (long)self.cod);
 }
 @end
